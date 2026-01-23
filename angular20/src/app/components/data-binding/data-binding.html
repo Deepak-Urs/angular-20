@@ -1,0 +1,33 @@
+<p>{{ courseName }}</p>
+<p>{{ productPrice }}</p>
+
+<!-- interpolation -->
+<input type="text" value="{{courseName}}" />
+
+maxlength
+<input type="text" [max]="maxLength" [min]="minLength" />
+
+<!-- property binding -->
+checkbox
+<input [type]="inputType" value="{{courseName}}"/>
+
+
+<div>
+<button (click)="showWelcomMessage()">See Message</button>
+<button (click)="changeCourseName()">Change Message</button>
+</div>
+
+<div>
+    <select (change)="onCityChange()">
+        <option value="">Pune</option>
+        <option value="">Nagpur</option>
+        <option value="">Mumbai</option>
+        <option value="">Thane</option>
+    </select>
+</div>
+
+
+<div>
+    <input type="text" [(ngModel)]="courseName" />
+    NgModeledValue: {{courseName}}
+</div>
