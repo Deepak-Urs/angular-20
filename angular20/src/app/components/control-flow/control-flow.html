@@ -1,0 +1,29 @@
+<p>control-flow works!</p>
+
+@if(isParaVisible) {
+    <p>This is a sample paragraph</p>
+}
+@else {
+    <p>paragraph hidden</p>
+}
+<button (click)="toggleBtn(true)">Show P</button>
+<button (click)="toggleBtn(false)">Hide P</button>
+
+
+<div>
+<select>
+    @for( city of cityList; track $index) {
+        <option value="">{{city}}</option>
+    }
+</select>
+</div>
+
+
+<div>
+    <div>Student Details</div>
+    @for(st of studentDetails; track $index) {
+        <div>
+        {{st.name}},{{st.city}},{{st.isActive}}
+        </div>
+    }
+</div>
